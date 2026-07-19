@@ -38,7 +38,7 @@ function CombinedLoginPage() {
       let response;
       if (loginType === 'user') {
         // Call user login endpoint
-        response = await axios.post('https://cms-project-ffk1.onrender.com/api/user/login', {
+        response = await axios.post(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001/api'}/user/login`, {
           email,
           password,
         });
@@ -59,7 +59,7 @@ function CombinedLoginPage() {
         }
       } else {
         // Call admin login endpoint
-        response = await axios.post('https://cms-project-ffk1.onrender.com/api/admin/login', {
+        response = await axios.post(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001/api'}/admin/login`, {
           email: email,
           password,
           specialId,

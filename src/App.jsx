@@ -31,7 +31,7 @@ function AppContent() {
   }, [theme]);
 
   return (
-    <Router basename="/cms-frontend">
+    <Router basename="/">
       <div
         className={`min-h-screen flex flex-col w-full ${
           theme === 'dark' ? 'bg-black-900 text-white' : 'bg-white text-black-900'

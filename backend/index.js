@@ -44,7 +44,7 @@ app.use('/uploads', express.static('uploads'));
 
 // Enable CORS for frontend origin
 app.use(cors({
-  origin: process.env.FRONTEND_URL || ['http://localhost:5173', 'https://greyengravings.github.io'],
+  origin: process.env.FRONTEND_URL || ['http://localhost:5173', 'https://cms-frontend-rgf4.onrender.com'],
   credentials: true,
 }));
 
